@@ -4,6 +4,12 @@ import Todo from './Todo';
 
 export default function TodoList() {
   const [todoList, setTodoList] = useState();
+  const [title, setTitle] = useState('');
+  const [date, setDate] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [number, setNumber] = useState('');
+
 
   useEffect(() => {
     const todoRef = firebase.database().ref('mesages');
@@ -23,5 +29,7 @@ export default function TodoList() {
         ? todoList.map((todo, index) => <Todo todo={todo} key={index} />)
         : ''}
     </div>
+
+
   );
 }
