@@ -6,7 +6,7 @@ export default function TodoList() {
   const [todoList, setTodoList] = useState();
 
   useEffect(() => {
-    const todoRef = firebase.database().ref('Todo');
+    const todoRef = firebase.database().ref('mesages');
     todoRef.on('value', (snapshot) => {
       const todos = snapshot.val();
       const todoList = [];

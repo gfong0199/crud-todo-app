@@ -8,7 +8,7 @@ export default function Form() {
     setTitle(e.target.value);
   };
   const createTodo = () => {
-    const todoRef = firebase.database().ref('Todo');
+    const todoRef = firebase.database().ref('mesages');
     const todo = {
       title,
       complete: false,

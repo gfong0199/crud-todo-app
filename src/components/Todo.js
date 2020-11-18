@@ -4,11 +4,11 @@ import '../App.css';
 
 export default function Todo({ todo }) {
   const deleteTodo = () => {
-    const todoRef = firebase.database().ref('Todo').child(todo.id);
+    const todoRef = firebase.database().ref('mesages').child(todo.id);
     todoRef.remove();
   };
   const completeTodo = () => {
-    const todoRef = firebase.database().ref('Todo').child(todo.id);
+    const todoRef = firebase.database().ref('mesages').child(todo.id);
     todoRef.update({
       complete: !todo.complete,
     });
